@@ -1,6 +1,5 @@
 name: Java CI/CD Pipeline
 
-# Запуск workflow при пуше или pull request в ветку master
 on:
   push:
     branches:

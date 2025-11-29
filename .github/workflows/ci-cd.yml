@@ -1,13 +1,10 @@
 name: Java CI/CD Pipeline
 
-# Workflow запускается при пуше или pull request в ветку master
 on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
   pull_request:
-    branches:
-      - master
+    branches: [ "master" ]
 
 jobs:
   build-test:
@@ -46,4 +43,4 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_API_KEY }}
         run: |
-          railway up --detach
+          railway up
